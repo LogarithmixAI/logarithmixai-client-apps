@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "traffic_simulator"
+version = "1.1.0"
+description = "Realistic traffic simulation SDK"
+authors = [{name = "Shubham"}]
+dependencies = [
+    "requests"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["traffic_simulator*"]
