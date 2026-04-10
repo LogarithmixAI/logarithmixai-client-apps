@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "traffic_simulator"
+version = "0.1.0"
+description = "Synthetic traffic and chaos simulation SDK for anomaly detection experiments"
+authors = [
+    { name = "Shubham Garg" }
+]
+readme = "readme.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "numpy",
+    "pydantic",
+]
+
+keywords = ["traffic", "simulation", "chaos-engineering", "anomaly-detection", "synthetic-logs"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["simulator_sdk*"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "ruff"
+]
